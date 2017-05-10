@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title=@"我的花盆";
-    NSString *urlString=@"http://api.yeelink.net/v1.0/device/357266/sensor/405317/datapoint/2017-05-19T22:13:14";
+    NSString *urlString=@"http://api.yeelink.net/v1.0/device/357266/sensor/405317/datapoint/";
     NSURL *url=[[NSURL alloc]initWithString:urlString];
     _req=[NSMutableURLRequest requestWithURL:url];
     //[_req setHTTPMethod:@"DELETE"];
