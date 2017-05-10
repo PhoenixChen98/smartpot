@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D042D7FA1EA0AAB300C58E9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042D7F91EA0AAB300C58E9C /* ViewController.m */; };
 		D09754791E950ABE00D1AFDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09754781E950ABE00D1AFDA /* main.m */; };
 		D097547C1E950ABE00D1AFDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D097547B1E950ABE00D1AFDA /* AppDelegate.m */; };
-		D097547F1E950ABE00D1AFDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D097547E1E950ABE00D1AFDA /* ViewController.m */; };
 		D09754821E950ABE00D1AFDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754801E950ABE00D1AFDA /* Main.storyboard */; };
 		D09754841E950ABE00D1AFDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09754831E950ABE00D1AFDA /* Assets.xcassets */; };
 		D09754871E950ABE00D1AFDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D042D7F81EA0AAB300C58E9C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D042D7F91EA0AAB300C58E9C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D09754741E950ABE00D1AFDA /* 智能花盆.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "智能花盆.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09754781E950ABE00D1AFDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D097547A1E950ABE00D1AFDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D097547B1E950ABE00D1AFDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D097547D1E950ABE00D1AFDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D097547E1E950ABE00D1AFDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D09754811E950ABE00D1AFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D09754831E950ABE00D1AFDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09754861E950ABE00D1AFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,10 +58,10 @@
 		D09754761E950ABE00D1AFDA /* 智能花盆 */ = {
 			isa = PBXGroup;
 			children = (
+				D042D7F81EA0AAB300C58E9C /* ViewController.h */,
+				D042D7F91EA0AAB300C58E9C /* ViewController.m */,
 				D097547A1E950ABE00D1AFDA /* AppDelegate.h */,
 				D097547B1E950ABE00D1AFDA /* AppDelegate.m */,
-				D097547D1E950ABE00D1AFDA /* ViewController.h */,
-				D097547E1E950ABE00D1AFDA /* ViewController.m */,
 				D09754801E950ABE00D1AFDA /* Main.storyboard */,
 				D09754831E950ABE00D1AFDA /* Assets.xcassets */,
 				D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */,
@@ -151,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D097547F1E950ABE00D1AFDA /* ViewController.m in Sources */,
+				D042D7FA1EA0AAB300C58E9C /* ViewController.m in Sources */,
 				D097547C1E950ABE00D1AFDA /* AppDelegate.m in Sources */,
 				D09754791E950ABE00D1AFDA /* main.m in Sources */,
 			);
@@ -275,6 +275,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 368P4F2MDB;
 				INFOPLIST_FILE = "智能花盆/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Phoenix.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 368P4F2MDB;
 				INFOPLIST_FILE = "智能花盆/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Phoenix.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +314,7 @@
 				D097548D1E950ABE00D1AFDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
