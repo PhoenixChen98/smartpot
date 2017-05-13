@@ -14,6 +14,7 @@
 @property(nonatomic)NSURLSession *session;
 @property(nonatomic)NSMutableData *data;
 @property(nonatomic)NSMutableURLRequest *req;
+@property(nonatomic)NSTimer *timer;
 @end
 
 @implementation ViewController
@@ -27,10 +28,19 @@
     //[_req setHTTPMethod:@"DELETE"];
     [_req addValue:@"3e6556233e31d2f606704b2cd1dd25e6" forHTTPHeaderField:@"U-ApiKey"];
     _data=[[NSMutableData alloc]init];
-    [self fetch];
+    _timer =  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(fetch) userInfo:nil repeats:YES];
+    
     // Do any additional setup after loading the view.
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [self fetch];
+    [_timer setFireDate:[NSDate distantPast]];
+    NSLog(@"已开启");
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [_timer setFireDate:[NSDate distantFuture]];
+    NSLog(@"已关闭");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,8 +49,8 @@
     NSLog(@"错误：%@",error);
 }
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(nonnull NSURLResponse *)response{
-    NSHTTPURLResponse *httpResponse=(NSHTTPURLResponse *)response;
-    NSLog(@"返回信息\n%ld\n%@",(long)httpResponse.statusCode,httpResponse.allHeaderFields);
+    //NSHTTPURLResponse *httpResponse=(NSHTTPURLResponse *)response;
+    //NSLog(@"返回信息\n%ld\n%@",(long)httpResponse.statusCode,httpResponse.allHeaderFields);
 }
 -(void)connection:(NSURLConnection *)connection didReceiveData:(nonnull NSData *)data{
     [_data appendData:data];
@@ -50,19 +60,20 @@
     NSString *str=[[NSString alloc]initWithData:_data encoding:NSUTF8StringEncoding];
     NSLog(@"输出%@",str);
     NSDictionary *jsonObject=[NSJSONSerialization JSONObjectWithData:_data options:0 error:nil];
+    _data=[[NSMutableData alloc]init];
     self.temperatureLabel.text=[NSString stringWithFormat:@"温度：%@°C",jsonObject[@"value"]];
 }
 -(void)fetch{
     _connect=[NSURLConnection connectionWithRequest:_req delegate:self];
 }
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
