@@ -7,13 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "STLoopProgressView.h"
+#import "MAThermometer.h"
+
 
 @interface ViewController ()<NSURLSessionDataDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
-@property(nonatomic)NSURLConnection *connect;
 @property(nonatomic)NSURLSession *session;
-@property(nonatomic)NSMutableData *data;
-@property(nonatomic)NSMutableURLRequest *req;
+
+@property (weak, nonatomic) IBOutlet STLoopProgressView *loopProgress;
+@property (weak, nonatomic) IBOutlet MAThermometer *thermometerSoil;
+@property (weak, nonatomic) IBOutlet MAThermometer *thermometerOut;
 @property(nonatomic)NSTimer *timer;
 @end
 
@@ -21,50 +25,56 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title=@"我的花盆";
-    NSString *urlString=@"http://api.yeelink.net/v1.0/device/357266/sensor/405317/datapoint/";
-    NSURL *url=[[NSURL alloc]initWithString:urlString];
-    _req=[NSMutableURLRequest requestWithURL:url];
-    //[_req setHTTPMethod:@"DELETE"];
-    [_req addValue:@"3e6556233e31d2f606704b2cd1dd25e6" forHTTPHeaderField:@"U-ApiKey"];
-    _data=[[NSMutableData alloc]init];
-    _timer =  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(fetch) userInfo:nil repeats:YES];
+    self.navigationItem.title=@"我的花园";
+    _session=[NSURLSession sharedSession];
     
+    _timer =  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(fetch) userInfo:nil repeats:YES];
     // Do any additional setup after loading the view.
+}
+- (IBAction)test:(id)sender {
+    static int i=5;
+    i+=5;
+    NSLog(@"i的值%d",i);
+    NSString *urlString=[NSString stringWithFormat:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/update/V1?value=%d",i];
+    NSURL *url=[[NSURL alloc]initWithString:urlString];
+    NSMutableURLRequest *req=[NSMutableURLRequest requestWithURL:url];
+    NSURLSessionDataTask *task = [_session dataTaskWithRequest:req
+                                            completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
+                                      
+                                  }];
+    [task resume];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [self fetch];
     [_timer setFireDate:[NSDate distantPast]];
-    NSLog(@"已开启");
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [_timer setFireDate:[NSDate distantFuture]];
-    NSLog(@"已关闭");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
-    NSLog(@"错误：%@",error);
-}
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(nonnull NSURLResponse *)response{
-    //NSHTTPURLResponse *httpResponse=(NSHTTPURLResponse *)response;
-    //NSLog(@"返回信息\n%ld\n%@",(long)httpResponse.statusCode,httpResponse.allHeaderFields);
-}
--(void)connection:(NSURLConnection *)connection didReceiveData:(nonnull NSData *)data{
-    [_data appendData:data];
-    NSLog(@"收到数据");
-}
--(void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    NSString *str=[[NSString alloc]initWithData:_data encoding:NSUTF8StringEncoding];
-    NSLog(@"输出%@",str);
-    NSDictionary *jsonObject=[NSJSONSerialization JSONObjectWithData:_data options:0 error:nil];
-    _data=[[NSMutableData alloc]init];
-    self.temperatureLabel.text=[NSString stringWithFormat:@"温度：%@°C",jsonObject[@"value"]];
-}
 -(void)fetch{
-    _connect=[NSURLConnection connectionWithRequest:_req delegate:self];
+    NSURL *url=[[NSURL alloc]initWithString:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/get/V1"];
+    NSMutableURLRequest *req=[NSMutableURLRequest requestWithURL:url];
+    NSURLSessionDataTask *task = [_session dataTaskWithRequest:req completionHandler:
+      ^(NSData *data, NSURLResponse *response, NSError *error) {
+          NSArray *array=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+          float value=[(NSString *)array[0] floatValue];
+          NSLog(@"数据：\n%f",value);
+          
+          dispatch_async(dispatch_get_main_queue(), ^{
+              _loopProgress.persentage=value/100;
+              _thermometerSoil.curValue=value;
+          });
+      }];
+    [task resume];
+    
+    
+    
+    
 }
 /*
  #pragma mark - Navigation

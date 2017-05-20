@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00CEFFB1ECDDF6A00EFC4B4 /* MAThermometer.m in Sources */ = {isa = PBXBuildFile; fileRef = D00CEFF81ECDDF6A00EFC4B4 /* MAThermometer.m */; };
+		D00CEFFC1ECDDF6A00EFC4B4 /* MAThermometerBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D00CEFFA1ECDDF6A00EFC4B4 /* MAThermometerBorder.m */; };
 		D042D7FA1EA0AAB300C58E9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042D7F91EA0AAB300C58E9C /* ViewController.m */; };
 		D09754791E950ABE00D1AFDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09754781E950ABE00D1AFDA /* main.m */; };
 		D097547C1E950ABE00D1AFDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D097547B1E950ABE00D1AFDA /* AppDelegate.m */; };
 		D09754821E950ABE00D1AFDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754801E950ABE00D1AFDA /* Main.storyboard */; };
 		D09754841E950ABE00D1AFDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09754831E950ABE00D1AFDA /* Assets.xcassets */; };
 		D09754871E950ABE00D1AFDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */; };
+		D0CDAE331ECC4846002F8D7D /* 浇水.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CDAE321ECC4846002F8D7D /* 浇水.png */; };
+		D0CDAE391ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDAE361ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m */; };
+		D0CDAE3A1ECC4F14002F8D7D /* STLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDAE381ECC4F14002F8D7D /* STLoopProgressView.m */; };
+		D0FD3EE21ECFD904007BE909 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D0FD3EE11ECFD904007BE909 /* timg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00CEFF71ECDDF6A00EFC4B4 /* MAThermometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAThermometer.h; sourceTree = "<group>"; };
+		D00CEFF81ECDDF6A00EFC4B4 /* MAThermometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAThermometer.m; sourceTree = "<group>"; };
+		D00CEFF91ECDDF6A00EFC4B4 /* MAThermometerBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAThermometerBorder.h; sourceTree = "<group>"; };
+		D00CEFFA1ECDDF6A00EFC4B4 /* MAThermometerBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAThermometerBorder.m; sourceTree = "<group>"; };
 		D042D7F81EA0AAB300C58E9C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D042D7F91EA0AAB300C58E9C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D09754741E950ABE00D1AFDA /* 智能花盆.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "智能花盆.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +36,12 @@
 		D09754831E950ABE00D1AFDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09754861E950ABE00D1AFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09754881E950ABE00D1AFDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CDAE321ECC4846002F8D7D /* 浇水.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "浇水.png"; sourceTree = "<group>"; };
+		D0CDAE351ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STLoopProgressView+BaseConfiguration.h"; sourceTree = "<group>"; };
+		D0CDAE361ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STLoopProgressView+BaseConfiguration.m"; sourceTree = "<group>"; };
+		D0CDAE371ECC4F14002F8D7D /* STLoopProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLoopProgressView.h; sourceTree = "<group>"; };
+		D0CDAE381ECC4F14002F8D7D /* STLoopProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLoopProgressView.m; sourceTree = "<group>"; };
+		D0FD3EE11ECFD904007BE909 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +55,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00CEFF61ECDDF6A00EFC4B4 /* MAThermometer */ = {
+			isa = PBXGroup;
+			children = (
+				D00CEFF71ECDDF6A00EFC4B4 /* MAThermometer.h */,
+				D00CEFF81ECDDF6A00EFC4B4 /* MAThermometer.m */,
+				D00CEFF91ECDDF6A00EFC4B4 /* MAThermometerBorder.h */,
+				D00CEFFA1ECDDF6A00EFC4B4 /* MAThermometerBorder.m */,
+			);
+			path = MAThermometer;
+			sourceTree = "<group>";
+		};
 		D097546B1E950ABE00D1AFDA = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +93,10 @@
 				D09754831E950ABE00D1AFDA /* Assets.xcassets */,
 				D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */,
 				D09754881E950ABE00D1AFDA /* Info.plist */,
+				D0CDAE321ECC4846002F8D7D /* 浇水.png */,
+				D0FD3EE11ECFD904007BE909 /* timg.jpeg */,
+				D00CEFF61ECDDF6A00EFC4B4 /* MAThermometer */,
+				D0CDAE341ECC4F14002F8D7D /* STLoopProgressView */,
 				D09754771E950ABE00D1AFDA /* Supporting Files */,
 			);
 			path = "智能花盆";
@@ -77,6 +108,17 @@
 				D09754781E950ABE00D1AFDA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0CDAE341ECC4F14002F8D7D /* STLoopProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				D0CDAE351ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.h */,
+				D0CDAE361ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m */,
+				D0CDAE371ECC4F14002F8D7D /* STLoopProgressView.h */,
+				D0CDAE381ECC4F14002F8D7D /* STLoopProgressView.m */,
+			);
+			path = STLoopProgressView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FD3EE21ECFD904007BE909 /* timg.jpeg in Resources */,
+				D0CDAE331ECC4846002F8D7D /* 浇水.png in Resources */,
 				D09754871E950ABE00D1AFDA /* LaunchScreen.storyboard in Resources */,
 				D09754841E950ABE00D1AFDA /* Assets.xcassets in Resources */,
 				D09754821E950ABE00D1AFDA /* Main.storyboard in Resources */,
@@ -151,8 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CDAE391ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m in Sources */,
+				D0CDAE3A1ECC4F14002F8D7D /* STLoopProgressView.m in Sources */,
 				D042D7FA1EA0AAB300C58E9C /* ViewController.m in Sources */,
 				D097547C1E950ABE00D1AFDA /* AppDelegate.m in Sources */,
+				D00CEFFB1ECDDF6A00EFC4B4 /* MAThermometer.m in Sources */,
+				D00CEFFC1ECDDF6A00EFC4B4 /* MAThermometerBorder.m in Sources */,
 				D09754791E950ABE00D1AFDA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
