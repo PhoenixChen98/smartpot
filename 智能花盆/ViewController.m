@@ -14,7 +14,6 @@
 @interface ViewController ()<NSURLSessionDataDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property(nonatomic)NSURLSession *session;
-
 @property (weak, nonatomic) IBOutlet STLoopProgressView *loopProgress;
 @property (weak, nonatomic) IBOutlet MAThermometer *thermometerSoil;
 @property (weak, nonatomic) IBOutlet MAThermometer *thermometerOut;
@@ -25,9 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title=@"我的花园";
+    NSLog(@"start");
     _session=[NSURLSession sharedSession];
-    
     _timer =  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(fetch) userInfo:nil repeats:YES];
     // Do any additional setup after loading the view.
 }
@@ -38,11 +36,8 @@
     NSString *urlString=[NSString stringWithFormat:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/update/V1?value=%d",i];
     NSURL *url=[[NSURL alloc]initWithString:urlString];
     NSMutableURLRequest *req=[NSMutableURLRequest requestWithURL:url];
-    NSURLSessionDataTask *task = [_session dataTaskWithRequest:req
-                                            completionHandler:
-                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                      
-                                  }];
+    NSURLSessionDataTask *task = [_session dataTaskWithRequest:req completionHandler:
+                                  ^(NSData *data, NSURLResponse *response, NSError *error) {}];
     [task resume];
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -57,21 +52,37 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)fetch{
+    //获取土壤湿度
     NSURL *url=[[NSURL alloc]initWithString:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/get/V1"];
     NSMutableURLRequest *req=[NSMutableURLRequest requestWithURL:url];
-    NSURLSessionDataTask *task = [_session dataTaskWithRequest:req completionHandler:
+    NSURLSessionDataTask *task1 = [_session dataTaskWithRequest:req completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *error) {
           NSArray *array=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
           float value=[(NSString *)array[0] floatValue];
-          NSLog(@"数据：\n%f",value);
           
+          //插入到主线程中更新UI
           dispatch_async(dispatch_get_main_queue(), ^{
               _loopProgress.persentage=value/100;
               _thermometerSoil.curValue=value;
           });
       }];
-    [task resume];
+    [task1 resume];
     
+    //获取外界温度
+    url=[[NSURL alloc]initWithString:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/get/V0"];
+    req=[NSMutableURLRequest requestWithURL:url];
+    NSURLSessionDataTask *task2 = [_session dataTaskWithRequest:req completionHandler:
+      ^(NSData *data, NSURLResponse *response, NSError *error) {
+          NSArray *array=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+          float value=[(NSString *)array[0] floatValue];
+          
+          //插入到主线程中更新UI
+          dispatch_async(dispatch_get_main_queue(), ^{
+//              _loopProgress.persentage=value/100;
+//              _thermometerSoil.curValue=value;
+          });
+      }];
+    [task2 resume];
     
     
     

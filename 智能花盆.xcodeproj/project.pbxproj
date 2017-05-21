@@ -15,6 +15,8 @@
 		D09754821E950ABE00D1AFDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754801E950ABE00D1AFDA /* Main.storyboard */; };
 		D09754841E950ABE00D1AFDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09754831E950ABE00D1AFDA /* Assets.xcassets */; };
 		D09754871E950ABE00D1AFDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */; };
+		D0BF868D1ED172BA0089C9E5 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BF868C1ED172BA0089C9E5 /* LoginController.m */; };
+		D0BF86911ED1761C0089C9E5 /* 未标题-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BF86901ED1761C0089C9E5 /* 未标题-1.png */; };
 		D0CDAE331ECC4846002F8D7D /* 浇水.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CDAE321ECC4846002F8D7D /* 浇水.png */; };
 		D0CDAE391ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDAE361ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m */; };
 		D0CDAE3A1ECC4F14002F8D7D /* STLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDAE381ECC4F14002F8D7D /* STLoopProgressView.m */; };
@@ -36,6 +38,9 @@
 		D09754831E950ABE00D1AFDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09754861E950ABE00D1AFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09754881E950ABE00D1AFDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0BF868B1ED172BA0089C9E5 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		D0BF868C1ED172BA0089C9E5 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		D0BF86901ED1761C0089C9E5 /* 未标题-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未标题-1.png"; sourceTree = "<group>"; };
 		D0CDAE321ECC4846002F8D7D /* 浇水.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "浇水.png"; sourceTree = "<group>"; };
 		D0CDAE351ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STLoopProgressView+BaseConfiguration.h"; sourceTree = "<group>"; };
 		D0CDAE361ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STLoopProgressView+BaseConfiguration.m"; sourceTree = "<group>"; };
@@ -87,12 +92,15 @@
 			children = (
 				D042D7F81EA0AAB300C58E9C /* ViewController.h */,
 				D042D7F91EA0AAB300C58E9C /* ViewController.m */,
+				D0BF868B1ED172BA0089C9E5 /* LoginController.h */,
+				D0BF868C1ED172BA0089C9E5 /* LoginController.m */,
 				D097547A1E950ABE00D1AFDA /* AppDelegate.h */,
 				D097547B1E950ABE00D1AFDA /* AppDelegate.m */,
 				D09754801E950ABE00D1AFDA /* Main.storyboard */,
 				D09754831E950ABE00D1AFDA /* Assets.xcassets */,
 				D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */,
 				D09754881E950ABE00D1AFDA /* Info.plist */,
+				D0BF86901ED1761C0089C9E5 /* 未标题-1.png */,
 				D0CDAE321ECC4846002F8D7D /* 浇水.png */,
 				D0FD3EE11ECFD904007BE909 /* timg.jpeg */,
 				D00CEFF61ECDDF6A00EFC4B4 /* MAThermometer */,
@@ -183,6 +191,7 @@
 				D0FD3EE21ECFD904007BE909 /* timg.jpeg in Resources */,
 				D0CDAE331ECC4846002F8D7D /* 浇水.png in Resources */,
 				D09754871E950ABE00D1AFDA /* LaunchScreen.storyboard in Resources */,
+				D0BF86911ED1761C0089C9E5 /* 未标题-1.png in Resources */,
 				D09754841E950ABE00D1AFDA /* Assets.xcassets in Resources */,
 				D09754821E950ABE00D1AFDA /* Main.storyboard in Resources */,
 			);
@@ -196,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CDAE391ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m in Sources */,
+				D0BF868D1ED172BA0089C9E5 /* LoginController.m in Sources */,
 				D0CDAE3A1ECC4F14002F8D7D /* STLoopProgressView.m in Sources */,
 				D042D7FA1EA0AAB300C58E9C /* ViewController.m in Sources */,
 				D097547C1E950ABE00D1AFDA /* AppDelegate.m in Sources */,
