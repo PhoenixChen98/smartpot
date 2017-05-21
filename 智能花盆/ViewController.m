@@ -27,6 +27,8 @@
     NSLog(@"start");
     _session=[NSURLSession sharedSession];
     _timer =  [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(fetch) userInfo:nil repeats:YES];
+    _loopProgress.persentage=1;
+    _thermometerSoil.curValue=100;
     // Do any additional setup after loading the view.
 }
 - (IBAction)test:(id)sender {
@@ -52,39 +54,39 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)fetch{
-    //获取土壤湿度
-    NSURL *url=[[NSURL alloc]initWithString:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/get/V1"];
-    NSMutableURLRequest *req=[NSMutableURLRequest requestWithURL:url];
-    NSURLSessionDataTask *task1 = [_session dataTaskWithRequest:req completionHandler:
-      ^(NSData *data, NSURLResponse *response, NSError *error) {
-          NSArray *array=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-          float value=[(NSString *)array[0] floatValue];
-          
-          //插入到主线程中更新UI
-          dispatch_async(dispatch_get_main_queue(), ^{
-              _loopProgress.persentage=value/100;
-              _thermometerSoil.curValue=value;
-          });
-      }];
-    [task1 resume];
-    
-    //获取外界温度
-    url=[[NSURL alloc]initWithString:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/get/V0"];
-    req=[NSMutableURLRequest requestWithURL:url];
-    NSURLSessionDataTask *task2 = [_session dataTaskWithRequest:req completionHandler:
-      ^(NSData *data, NSURLResponse *response, NSError *error) {
-          NSArray *array=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-          float value=[(NSString *)array[0] floatValue];
-          
-          //插入到主线程中更新UI
-          dispatch_async(dispatch_get_main_queue(), ^{
+//    //获取土壤湿度
+//    NSURL *url=[[NSURL alloc]initWithString:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/get/V1"];
+//    NSMutableURLRequest *req=[NSMutableURLRequest requestWithURL:url];
+//    NSURLSessionDataTask *task1 = [_session dataTaskWithRequest:req completionHandler:
+//      ^(NSData *data, NSURLResponse *response, NSError *error) {
+//          NSArray *array=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//          float value=[(NSString *)array[0] floatValue];
+//          
+//          //插入到主线程中更新UI
+//          dispatch_async(dispatch_get_main_queue(), ^{
 //              _loopProgress.persentage=value/100;
 //              _thermometerSoil.curValue=value;
-          });
-      }];
-    [task2 resume];
-    
-    
+//          });
+//      }];
+//    [task1 resume];
+//    
+//    //获取外界温度
+//    url=[[NSURL alloc]initWithString:@"http://blynk-cloud.com/897d2e7dd84041fb9d209e5825592d83/get/V0"];
+//    req=[NSMutableURLRequest requestWithURL:url];
+//    NSURLSessionDataTask *task2 = [_session dataTaskWithRequest:req completionHandler:
+//      ^(NSData *data, NSURLResponse *response, NSError *error) {
+//          NSArray *array=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//          float value=[(NSString *)array[0] floatValue];
+//          
+//          //插入到主线程中更新UI
+//          dispatch_async(dispatch_get_main_queue(), ^{
+////              _loopProgress.persentage=value/100;
+////              _thermometerSoil.curValue=value;
+//          });
+//      }];
+//    [task2 resume];
+//    
+//    
     
 }
 /*

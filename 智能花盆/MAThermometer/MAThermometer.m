@@ -107,11 +107,17 @@
     _upperCircleSecond      = CGPointMake(_lowerCircleSecond.x, _upperCircleCenter.y);
     
     
-    [self setArrayColors:@[[UIColor blueColor],
-                           [UIColor cyanColor],
-                           [UIColor greenColor],
-                           [UIColor yellowColor],
-                           [UIColor redColor]]];
+//    [self setArrayColors:@[[UIColor blueColor],
+//                           [UIColor cyanColor],
+//                           [UIColor greenColor],
+//                           [UIColor yellowColor],
+//                           [UIColor redColor]]];
+    [self setArrayColors:@[[UIColor colorWithRed:39.0/255.0 green:189.0/255.0 blue:224.0/255.0 alpha:1],
+                           [UIColor colorWithRed:39.0/255.0 green:189.0/255.0 blue:224.0/255.0 alpha:1],
+                           [UIColor colorWithRed:149.0/255.0 green:202.0/255.0 blue:62.0/255.0 alpha:1],
+                           [UIColor colorWithRed:232.0/255.0 green:40.0/255.0 blue:39.0/255.0 alpha:1],
+                           [UIColor colorWithRed:232.0/255.0 green:40.0/255.0 blue:39.0/255.0 alpha:1]]];
+
     [self setMinValue:0 maxValue:100];
         
     // We compute all the points in order to save some time on drawRect method

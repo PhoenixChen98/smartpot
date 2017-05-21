@@ -54,14 +54,14 @@
 
     CAGradientLayer *leftLayer = [CAGradientLayer layer];
     leftLayer.frame = CGRectMake(0, 0, SELF_WIDTH / 2, SELF_HEIGHT);
-    // 分段设置渐变色
-    leftLayer.locations = @[@0.1, @0.6, @1];
+    // 分段设置渐变色，起（上）中、下
+    leftLayer.locations = @[@0.1, @0.4, @0.6];
     leftLayer.colors = @[(id)[STLoopProgressView centerColor].CGColor, (id)[STLoopProgressView startColor].CGColor];
     [self.colorLayer addSublayer:leftLayer];
     
     CAGradientLayer *rightLayer = [CAGradientLayer layer];
     rightLayer.frame = CGRectMake(SELF_WIDTH / 2, 0, SELF_WIDTH / 2, SELF_HEIGHT);
-    rightLayer.locations = @[@0.1, @0.6, @1];
+    rightLayer.locations = @[@0.1, @0.4, @0.6];
     rightLayer.colors = @[(id)[STLoopProgressView centerColor].CGColor, (id)[STLoopProgressView endColor].CGColor];
     [self.colorLayer addSublayer:rightLayer];
 }

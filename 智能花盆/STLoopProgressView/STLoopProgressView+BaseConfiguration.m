@@ -13,18 +13,18 @@
 @implementation STLoopProgressView (BaseConfiguration)
 
 + (UIColor *)startColor {
-    
-    
-    return [UIColor redColor];
+//    return [UIColor colorWithRed:236.0/255.0 green:86.0/255.0 blue:114.0/255.0 alpha:1];
+    return [UIColor colorWithRed:232.0/255.0 green:40.0/255.0 blue:39.0/255.0 alpha:1];
 }
 
 + (UIColor *)centerColor {
-    
-    return [UIColor greenColor];
+//    return [UIColor colorWithRed:109.0/255.0 green:190.0/255.0 blue:128.0/255.0 alpha:1];
+    return [UIColor colorWithRed:149.0/255.0 green:202.0/255.0 blue:62.0/255.0 alpha:1];
 }
 
 + (UIColor *)endColor {
-    return [UIColor blueColor];
+//    return [UIColor colorWithRed:139.0/255.0 green:163.0/255.0 blue:208.0/255.0 alpha:1];
+    return [UIColor colorWithRed:39.0/255.0 green:189.0/255.0 blue:224.0/255.0 alpha:1];
 }
 
 + (UIColor *)backgroundColor {
