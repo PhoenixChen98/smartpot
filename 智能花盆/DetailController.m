@@ -1,18 +1,18 @@
 //
-//  LoginController.m
+//  DetailController.m
 //  智能花盆
 //
-//  Created by Phoenix on 2017/5/21.
+//  Created by Phoenix on 2017/5/28.
 //  Copyright © 2017年 Phoenix. All rights reserved.
 //
 
-#import "LoginController.h"
+#import "DetailController.h"
 
-@interface LoginController ()
+@interface DetailController ()
 
 @end
 
-@implementation LoginController
+@implementation DetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,9 +23,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
-}
+
 /*
 #pragma mark - Navigation
 

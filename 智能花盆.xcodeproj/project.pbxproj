@@ -10,14 +10,21 @@
 		D00CEFFB1ECDDF6A00EFC4B4 /* MAThermometer.m in Sources */ = {isa = PBXBuildFile; fileRef = D00CEFF81ECDDF6A00EFC4B4 /* MAThermometer.m */; };
 		D00CEFFC1ECDDF6A00EFC4B4 /* MAThermometerBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D00CEFFA1ECDDF6A00EFC4B4 /* MAThermometerBorder.m */; };
 		D02B65501ED1D5E2008CC2C2 /* 浇水.png in Resources */ = {isa = PBXBuildFile; fileRef = D02B654F1ED1D5E2008CC2C2 /* 浇水.png */; };
+		D0303EDD1ED331B100C960C1 /* 登录.png in Resources */ = {isa = PBXBuildFile; fileRef = D0303EDC1ED331B100C960C1 /* 登录.png */; };
+		D0303EDF1ED3324D00C960C1 /* 密码.png in Resources */ = {isa = PBXBuildFile; fileRef = D0303EDE1ED3324D00C960C1 /* 密码.png */; };
+		D03B1FBB1EDA4BCD009E4A5D /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03B1FBA1EDA4BCD009E4A5D /* DetailController.m */; };
 		D042D7FA1EA0AAB300C58E9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042D7F91EA0AAB300C58E9C /* ViewController.m */; };
+		D04805751ED555AD00F91F6C /* 花城.png in Resources */ = {isa = PBXBuildFile; fileRef = D04805741ED555AD00F91F6C /* 花城.png */; };
+		D04805791ED5592300F91F6C /* 底图.png in Resources */ = {isa = PBXBuildFile; fileRef = D04805781ED5592300F91F6C /* 底图.png */; };
 		D09754791E950ABE00D1AFDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D09754781E950ABE00D1AFDA /* main.m */; };
 		D097547C1E950ABE00D1AFDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D097547B1E950ABE00D1AFDA /* AppDelegate.m */; };
 		D09754821E950ABE00D1AFDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754801E950ABE00D1AFDA /* Main.storyboard */; };
 		D09754841E950ABE00D1AFDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09754831E950ABE00D1AFDA /* Assets.xcassets */; };
 		D09754871E950ABE00D1AFDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */; };
+		D0A1D8A41ED4858500EB7CA1 /* 主界面.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A1D8A31ED4858500EB7CA1 /* 主界面.png */; };
+		D0A1D8A81ED486D800EB7CA1 /* 主界面2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A1D8A71ED486D800EB7CA1 /* 主界面2.png */; };
 		D0BF868D1ED172BA0089C9E5 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BF868C1ED172BA0089C9E5 /* LoginController.m */; };
-		D0BF86911ED1761C0089C9E5 /* 未标题-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BF86901ED1761C0089C9E5 /* 未标题-1.png */; };
+		D0BF86911ED1761C0089C9E5 /* 登录按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BF86901ED1761C0089C9E5 /* 登录按钮.png */; };
 		D0CDAE331ECC4846002F8D7D /* 浇水2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CDAE321ECC4846002F8D7D /* 浇水2.png */; };
 		D0CDAE391ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDAE361ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m */; };
 		D0CDAE3A1ECC4F14002F8D7D /* STLoopProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDAE381ECC4F14002F8D7D /* STLoopProgressView.m */; };
@@ -30,8 +37,14 @@
 		D00CEFF91ECDDF6A00EFC4B4 /* MAThermometerBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAThermometerBorder.h; sourceTree = "<group>"; };
 		D00CEFFA1ECDDF6A00EFC4B4 /* MAThermometerBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAThermometerBorder.m; sourceTree = "<group>"; };
 		D02B654F1ED1D5E2008CC2C2 /* 浇水.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "浇水.png"; sourceTree = "<group>"; };
+		D0303EDC1ED331B100C960C1 /* 登录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录.png"; sourceTree = "<group>"; };
+		D0303EDE1ED3324D00C960C1 /* 密码.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "密码.png"; sourceTree = "<group>"; };
+		D03B1FB91EDA4BCD009E4A5D /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
+		D03B1FBA1EDA4BCD009E4A5D /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
 		D042D7F81EA0AAB300C58E9C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D042D7F91EA0AAB300C58E9C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D04805741ED555AD00F91F6C /* 花城.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "花城.png"; sourceTree = "<group>"; };
+		D04805781ED5592300F91F6C /* 底图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "底图.png"; sourceTree = "<group>"; };
 		D09754741E950ABE00D1AFDA /* 智能花盆.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "智能花盆.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09754781E950ABE00D1AFDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D097547A1E950ABE00D1AFDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,9 +53,11 @@
 		D09754831E950ABE00D1AFDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09754861E950ABE00D1AFDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09754881E950ABE00D1AFDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0A1D8A31ED4858500EB7CA1 /* 主界面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主界面.png"; sourceTree = "<group>"; };
+		D0A1D8A71ED486D800EB7CA1 /* 主界面2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主界面2.png"; sourceTree = "<group>"; };
 		D0BF868B1ED172BA0089C9E5 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		D0BF868C1ED172BA0089C9E5 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
-		D0BF86901ED1761C0089C9E5 /* 未标题-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未标题-1.png"; sourceTree = "<group>"; };
+		D0BF86901ED1761C0089C9E5 /* 登录按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录按钮.png"; sourceTree = "<group>"; };
 		D0CDAE321ECC4846002F8D7D /* 浇水2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "浇水2.png"; sourceTree = "<group>"; };
 		D0CDAE351ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "STLoopProgressView+BaseConfiguration.h"; sourceTree = "<group>"; };
 		D0CDAE361ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "STLoopProgressView+BaseConfiguration.m"; sourceTree = "<group>"; };
@@ -92,20 +107,28 @@
 		D09754761E950ABE00D1AFDA /* 智能花盆 */ = {
 			isa = PBXGroup;
 			children = (
+				D097547A1E950ABE00D1AFDA /* AppDelegate.h */,
+				D097547B1E950ABE00D1AFDA /* AppDelegate.m */,
 				D042D7F81EA0AAB300C58E9C /* ViewController.h */,
 				D042D7F91EA0AAB300C58E9C /* ViewController.m */,
 				D0BF868B1ED172BA0089C9E5 /* LoginController.h */,
 				D0BF868C1ED172BA0089C9E5 /* LoginController.m */,
-				D097547A1E950ABE00D1AFDA /* AppDelegate.h */,
-				D097547B1E950ABE00D1AFDA /* AppDelegate.m */,
+				D03B1FB91EDA4BCD009E4A5D /* DetailController.h */,
+				D03B1FBA1EDA4BCD009E4A5D /* DetailController.m */,
 				D09754801E950ABE00D1AFDA /* Main.storyboard */,
 				D09754831E950ABE00D1AFDA /* Assets.xcassets */,
 				D09754851E950ABE00D1AFDA /* LaunchScreen.storyboard */,
 				D09754881E950ABE00D1AFDA /* Info.plist */,
-				D0BF86901ED1761C0089C9E5 /* 未标题-1.png */,
+				D0A1D8A71ED486D800EB7CA1 /* 主界面2.png */,
+				D0A1D8A31ED4858500EB7CA1 /* 主界面.png */,
+				D0303EDC1ED331B100C960C1 /* 登录.png */,
+				D04805741ED555AD00F91F6C /* 花城.png */,
+				D0303EDE1ED3324D00C960C1 /* 密码.png */,
+				D0BF86901ED1761C0089C9E5 /* 登录按钮.png */,
 				D02B654F1ED1D5E2008CC2C2 /* 浇水.png */,
 				D0CDAE321ECC4846002F8D7D /* 浇水2.png */,
 				D0FD3EE11ECFD904007BE909 /* timg.jpeg */,
+				D04805781ED5592300F91F6C /* 底图.png */,
 				D00CEFF61ECDDF6A00EFC4B4 /* MAThermometer */,
 				D0CDAE341ECC4F14002F8D7D /* STLoopProgressView */,
 				D09754771E950ABE00D1AFDA /* Supporting Files */,
@@ -191,11 +214,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0303EDF1ED3324D00C960C1 /* 密码.png in Resources */,
 				D02B65501ED1D5E2008CC2C2 /* 浇水.png in Resources */,
+				D04805751ED555AD00F91F6C /* 花城.png in Resources */,
+				D0A1D8A41ED4858500EB7CA1 /* 主界面.png in Resources */,
+				D0A1D8A81ED486D800EB7CA1 /* 主界面2.png in Resources */,
 				D0FD3EE21ECFD904007BE909 /* timg.jpeg in Resources */,
+				D0303EDD1ED331B100C960C1 /* 登录.png in Resources */,
 				D0CDAE331ECC4846002F8D7D /* 浇水2.png in Resources */,
 				D09754871E950ABE00D1AFDA /* LaunchScreen.storyboard in Resources */,
-				D0BF86911ED1761C0089C9E5 /* 未标题-1.png in Resources */,
+				D0BF86911ED1761C0089C9E5 /* 登录按钮.png in Resources */,
+				D04805791ED5592300F91F6C /* 底图.png in Resources */,
 				D09754841E950ABE00D1AFDA /* Assets.xcassets in Resources */,
 				D09754821E950ABE00D1AFDA /* Main.storyboard in Resources */,
 			);
@@ -210,6 +239,7 @@
 			files = (
 				D0CDAE391ECC4F14002F8D7D /* STLoopProgressView+BaseConfiguration.m in Sources */,
 				D0BF868D1ED172BA0089C9E5 /* LoginController.m in Sources */,
+				D03B1FBB1EDA4BCD009E4A5D /* DetailController.m in Sources */,
 				D0CDAE3A1ECC4F14002F8D7D /* STLoopProgressView.m in Sources */,
 				D042D7FA1EA0AAB300C58E9C /* ViewController.m in Sources */,
 				D097547C1E950ABE00D1AFDA /* AppDelegate.m in Sources */,
