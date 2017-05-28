@@ -48,7 +48,9 @@ bool flag = 0;
         NSURLSessionDataTask *task = [_session dataTaskWithRequest:req completionHandler:
                                       ^(NSData *data, NSURLResponse *response, NSError *error) {}];
         [task resume];
-        [self performSelector:@selector(waterStop) withObject:nil afterDelay:4.0];
+        //[self performSelector:@selector(waterStop) withObject:nil afterDelay:4.0];
+    }else{
+        [self waterStop];
     }
     
     
@@ -87,7 +89,7 @@ bool flag = 0;
                   //插入到主线程中更新UI
                   dispatch_async(dispatch_get_main_queue(), ^{
                       _loopProgressSoil.persentage=value/1000;
-                      _humidSoil.text=[NSString stringWithFormat:@"%d%%",(int)value];
+                      _humidSoil.text=[NSString stringWithFormat:@"%d%%",(int)value/10];
                   });
               }];
     [task1 resume];
